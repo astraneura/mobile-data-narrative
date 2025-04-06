@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Patrick+Hand&display=swap');
+
+.narrative-body {
+    background-image: url(images/leaf.png);
+    background-position: center;
+}
+
+.reset-body {
+    background-image: url(images/lightleaf.png);
+    background-position: center;
+}
+
+.villagers-body{
+    background-image: url(images/leaf.png);
+    background-position: center;
+}
+
+p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    font-style: normal;
+    margin-left: 10px;
+}
+
+.navbar {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    background-color: #fbfff3 !important;
+}
+
+.nav-item{
+    font-size: 18px;
+}
+
+.fa-leaf {
+    color:darkgreen;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-family: "Itim", cursive;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+b {
+    font-family: "Itim", cursive;
+}
+
+h1{
+    font-family: "Patrick Hand", cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000000;
+    font-style: normal;
+}
+
+.icon-leaf::before {
+    content: "\f06c"; /* Unicode for the leaf icon */
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900; 
+    font-size: 1em; 
+    color: darkgreen; 
+    padding-right: 5px;
+}
+
+#sort-order{
+    font-family: "Itim", cursive;
+    font-size: 18px;
+}
+
+#react-data-table{
+    align-content: center;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.dataVis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-tag{
+    color: darkgreen;
+    font-size: 100px;
+}
+
+.fa-plane-departure{
+    color: darkgreen;
+    font-size: 100px;
+}
+
+.airplaneVideo{
+    width: 560px;
+    height: 315px;
+}
+
+#dialogueImage{
+    width:50%;
+    height: auto;
+
+}
+
+#tableImg{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#iconImg{
+    padding-top: 75px;
+}
+
+#my_dataviz{
+    font-family: "Itim", cursive;
+}
+
+@keyframes airplaneMove{
+    0%{
+        left: -200px;
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+#airplane{
+    position: relative;
+    left: -200px;
+    animation: airplaneMove 5s linear infinite;
+    color: darkgreen;
+    font-size: 35px;
+}

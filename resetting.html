@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <script src="https://kit.fontawesome.com/91bf4ff74d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+            <!-- Required for react.js -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- the component -->
+    <script src='assets/js/React/Component/ReactDataTable.js' type='text/babel'></script>
+        <title> Resetting Your Island </title>
+    </head>
+    <body> 
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Nook's Insights</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="narrative.html">Narrative</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active icon-leaf" aria-current="page" href="resetting.html">Resetting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="villagers.html">Favorite Villagers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div class= "reset-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>What Does Resetting Mean?</h1>
+                <p>Resetting is a process where the player deletes their save data and can be done for a few different reasons - such as getting a fresh start after getting bored of the gameplay loop, or to start with a specific native fruit, airport color, or layout.</p>
+                <p>For the scope of this narrative, we'll define resetting as deleting save data at the beginning to get a desired fruit or airport color.</p>
+                <p>Resetting itself seems to be uncommon among players; from the survey, 66 of the 96 responses had never reset their island to get specific native fruits or a different airport color.</p>
+                <p>This process can be time consuming: there are only a couple possible layouts where the Resident Services building is placed directly north of the airport, and can only randomly appear.</p>
+            </div>
+        </div>
+            <div class = "row">
+                <div class="col-3"> </div>
+                <div class = "col-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="airplaneVideo" src="https://www.youtube.com/embed/ZS0GsR8x5Rw?si=7toiK9iCExCAELTy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                    <p>The island flyover is the first glimpse a player will get of their island, allowing them to see what native fruit and airport color was generated.</p>
+                    <p>The island in the video, for example, generated with peaches and a blue airport. At this point, if the player disliked either or both of those choices, they could back out and delete the save, and try over again.</p>
+                    <p>I reset the save data on an island one hundred times, in order to find out how random some of the starting factors were, and this was the resulting data collected.</p>
+                <div class="col-3"> </div>
+            </div>
+        <div class="row">
+            <div class="col-3"> </div>
+            <div class = "col-6">
+                <h1> 100 Resets of An Island</h1>
+                <div id="react-data-table"></div>
+            </div>
+        <div class = "col-3"> </div>
+        </div>
+    <div class="row">
+        <div class="col-4">
+            <img src = "images/airports.png" alt = "Table of Airport Occurences" class = "img-fluid" id="tableImg">
+        </div>
+        <div class="col-4">
+            <h1>The Data, Summarized</h1>
+            <p>In a more simpler form, we can see that the airport distribution was fairly evenly distributed, with orange airports being only slightly more favored than the other three colors.</p>
+            <p>The fruits, however, were more uneven in their distribution, which means players wanting a specific native type could struggle more to find it.</p>
+            <p>Peaches were the most commonly generated, appearing 28 out of the 100 times reset. Apples were the most elusive fruit, only appearing 14 of the 100 resets.</p>
+        </div>
+        <div class="col-4">
+            <img src = "images/fruits.png" alt = "Table of Fruit Occurences" class = "img-fluid" id="tableImg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1"> </div>
+        <div class="col-5">
+            <h1>Data Combination Occurences</h1>
+            <p>Looking at the combinations from the 100 resets, we can see that the most commonly generated combination was a blue airport with peaches, with a green airport with peaches and an orange airport with oranges being close behind.</p>
+            <p>The least commonly generated combination was a blue airport with oranges, which is surprising given that oranges were generated fairly often.</p>
+            <p>A yellow airport with apples was also one of the least common combinations, but this makes much more sense. Apples were only generated 14 out of 100 times, so it would make sense for them to be rare.</p>
+            <p>Overall, with a data set of 100 points, it seems the game is mostly random when it comes to airport colors, but seems to be weighted towards certain kinds of fruit over others.</p>
+        </div>
+        <div class="col-5">
+            <img src = "images/combinations.png" alt = "Table of Airport and Fruit Occurences" class = "img-fluid" id = "tableImg">
+        </div>
+        <div class="col-1"> </div>
+    </div>
+    </div>
+    <div>
+        <i class="fa-solid fa-plane" id="airplane"></i>
+    </div>
+</div>
+</body>
+</html>
